@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 
 # set up connection to db
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/test11"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/wolf_collector_mk2"
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -52,3 +52,6 @@ app.register_blueprint(error_pages)
 #linking users views Blueprint
 from myapp.users.views import users
 app.register_blueprint(users)
+
+from myapp.wolves.views import wolves_posts
+app.register_blueprint(wolves_posts)
