@@ -1,0 +1,36 @@
+.title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  
+}
+
+.page-nums {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-nums a {
+  padding: 8px;
+  background-color: #EBA2E6;
+  border: 1px black solid;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.num {
+  list-style-type: none;
+}
+
+.num a {
+  text-decoration: none;
+}
