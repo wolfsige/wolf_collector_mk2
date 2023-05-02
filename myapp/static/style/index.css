@@ -1,8 +1,18 @@
-.title {
+.center-title {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+}
+
+.title-body {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
+  width: 400px;
+  background-color: #9071CC;
+  color: white;
+  border: 2px black solid;
+  border-radius: 10px 100px / 120px;
 }
 
 .container {
@@ -22,7 +32,8 @@
 
 .page-nums a {
   padding: 8px;
-  background-color: #EBA2E6;
+  background-color: #9071CC;
+  color: white;
   border: 1px black solid;
   border-radius: 10px;
   margin-right: 5px;
@@ -38,11 +49,12 @@
 
 
 .card {
-  background-color: #793200;
+  background-color: #9071CC;
   color: white;
   margin: 15px;
   padding-bottom: 10px;
   border-radius: 5px;
+  border: 2px black solid;
 }
 
 .card a {
