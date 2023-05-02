@@ -13,7 +13,7 @@
     <div class="container">
         {% for post in wolves.items %}
             <div class="card">
-                <div class="car-boy">
+                <div>
                     <img class="random-wolf" src="">
                     <h2 class="wolf-name">
                         <a class="card-title" href="{{url_for('wolves_posts.wolf', wolves_id=post.id)}}">{{post.title}}</a>
