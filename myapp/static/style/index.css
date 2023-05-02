@@ -24,10 +24,30 @@
   
 }
 
+.card {
+  background-color: #9071CC;
+  color: white;
+  margin: 15px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: 2px black solid;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+}
+
+.wolf-name {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 .page-nums {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .page-nums a {
@@ -47,22 +67,3 @@
   text-decoration: none;
 }
 
-
-.card {
-  background-color: #9071CC;
-  color: white;
-  margin: 15px;
-  padding-bottom: 10px;
-  border-radius: 5px;
-  border: 2px black solid;
-}
-
-.card a {
-  color: white;
-  text-decoration: none;
-}
-
-.wolf-name{
-  text-align: center;
-  padding-bottom: 10px;
-}
