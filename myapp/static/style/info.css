@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-body {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 400px;
+  background-color: #9071CC;
+  color: white;
+  border: 2px black solid;
+  border-radius: 10px 100px / 120px;
+}
+
+.center-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 15px;
+  background-color: #9071CC;
+  color: white;
+  border-radius: 5px;
+  border: 2px black solid;
+  width: 650px;
+}
+
+p {
+  padding: 5px;
+}
