@@ -8,6 +8,7 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 30px;
   
@@ -33,4 +34,23 @@
 
 .num a {
   text-decoration: none;
+}
+
+
+.card {
+  background-color: #793200;
+  color: white;
+  margin: 15px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+}
+
+.wolf-name{
+  text-align: center;
+  padding-bottom: 10px;
 }
