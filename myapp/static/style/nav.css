@@ -9,10 +9,9 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #333;
-  color: white;
 }
 
 .brand-title {
@@ -95,5 +94,4 @@ body {
   .navbar-links.active{
     display: flex;
   }
-
 }
