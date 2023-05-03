@@ -37,8 +37,9 @@
 }
 
 p {
-  padding: 5px;
-  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
 }
 
 img {
