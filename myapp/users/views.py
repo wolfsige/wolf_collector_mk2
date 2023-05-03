@@ -74,5 +74,5 @@ def account():
 def user_posts(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
-    wolves = Wolves.query.filter_by(author=user).order_by(Wolves.date.desc()).paginate(page=page, per_page=5) 
+    wolves = Wolves.query.filter_by(author=user).order_by(Wolves.date.desc()).paginate(page=page, per_page=4) 
     return render_template('user_wolves.html', wolves=wolves, user=user)
