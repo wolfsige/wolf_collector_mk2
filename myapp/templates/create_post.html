@@ -1,20 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
-      <form class="form-group" method="POST">
-          {{form.hidden_tag()}}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style/create.css')}}">
 
-          <div class="form-group">
-              {{form.title.label(class="form-control-label")}}
-              {{form.title(class="form-control form-control-lg")}}
+<div class="center-container">
+  <div class="title-body">
+    <h1>Create Your Wolf</h1>
+  </div>
+    <div class="container">
+      <form method="POST">
+          {{form.hidden_tag()}}
+          <div>
+              <p>Name:</p>
+              {{form.title}}
           </div>
-          <div class="form-group">
-            {{form.text.label(class="form-control-label")}}
-            {{form.text(class="form-control form-control-lg")}}
+          <div>
+            <p>Description:</p>
+            {{form.text(class="description")}}
         </div>
-        <div class="form-group">
-            {{form.submit(class="btn btn-outline-info")}}
+        <div>
+            {{form.submit}}
         </div>
       </form>
     </div>
+    <img src="../static/img/wolf-create-img.jpg">
+  </div>
 {% endblock %}
