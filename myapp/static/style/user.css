@@ -29,6 +29,7 @@
 }
 
 .card {
+  max-width: 644px;
   text-align: center;
   background-color: #9071CC;
   color: white;
@@ -50,6 +51,10 @@ img {
   height: 437px;
   padding-bottom: 10px;
   border-radius: 5px 5px 0px 0px;
+}
+
+.post-text {
+  padding: 10px;
 }
 
 .page-nums {
@@ -76,4 +81,3 @@ img {
 .num a {
   text-decoration: none;
 }
-
