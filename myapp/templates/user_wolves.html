@@ -1,37 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
-        <div class="jumbotron">
-            <div align="center">
-                <h1>Welcome to the page for {{user.username}}</h1>
-            </div>
-        </div>
-     {% for post in wolves.items %}
-    <h2>
-        <a href="{{url_for('wolves_posts.wolf', wolves_id=post.id)}}">{{post.title}}</a>
-    </h2>
-    Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
 
-    <p class="text-muted">
-        Published On: {{post.date.strftime("%y-%m-%d")}}
-    </p>
-    <br>
-    <p>{{post.text}}</p>
-    <br>
-    {% endfor %}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style/user.css')}}">
+<script defer src="{{ url_for('static', filename= 'js/rando-pictures.js')}}"></script>
+
+<div class="center-title">
+    <div class="title">
+        <h1>Here is all of {{user.username}}'s pack mates!</h1>
     </div>
+</div>
+<div class="container">
+     {% for post in wolves.items %}
+     <div class="card">
+        <img class="random-wolf" src="">
+        <h2>
+            <a href="{{url_for('wolves_posts.wolf', wolves_id=post.id)}}">{{post.title}}</a>
+        </h2>
+        Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
 
-    <nav aria-label="Page Navigation example">
-        <ul class="pagination justify-content-center">
+        <p>
+            Published On: {{post.date.strftime("%y-%m-%d")}}
+        </p><br>
+        <p>{{post.text}}</p><br>
+    </div>
+    {% endfor %}
+</div>
 
+    <nav class="page-nav">
+        <ul class="page-nums">
             {% for page_num in wolves.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
                 {% if wolves.page == page_num %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                <li class="num">
+                    <a href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
                 </li>
                 {% else %}
-                <li class="page-item">
-                    <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                <li class="num">
+                    <a href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
                 </li>
                 {% endif %}
             {% endfor %}
