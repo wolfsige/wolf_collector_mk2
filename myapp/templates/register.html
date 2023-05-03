@@ -1,12 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-   
-<form method="POST">
-    {{form.hidden_tag()}}
-    {{form.email.label}}{{form.email}}<br>
-    {{form.username.label}}{{form.username}}<br>
-    {{form.password.label}}{{form.password}}<br>
-    {{form.pass_confirm.label}}{{form.pass_confirm}}<br>
-    {{form.submit()}}
-</form>
+
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style/register.css')}}">
+
+<div class="center-container">
+    <div class="container">
+        <form method="POST">
+            {{form.hidden_tag()}}
+            {{form.email.label}}{{form.email}}<br>
+            {{form.username.label}}{{form.username}}<br>
+            {{form.password.label}}{{form.password}}<br>
+            {{form.pass_confirm.label}}{{form.pass_confirm}}<br>
+            <div class="submit-btn">
+                {{form.submit()}}
+            </div>
+        </form>
+
+            <div class="login">
+                Already have an account? <a href="{{url_for('users.login')}}"> Log In</a>
+            </div>
+    </div>
+</div>
 {% endblock %}
