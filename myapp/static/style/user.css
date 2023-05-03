@@ -46,6 +46,8 @@ img {
   display: block;
   object-fit: cover;
   margin: 0px;
+  width: 640px;
+  height: 437px;
   padding-bottom: 10px;
   border-radius: 5px 5px 0px 0px;
 }
