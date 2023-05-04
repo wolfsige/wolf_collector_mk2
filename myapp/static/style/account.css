@@ -67,3 +67,11 @@ div.submit {
 label {
   padding: 10px;
 }
+
+@media (max-width: 400px) {
+  .title{
+    font-size: 12px;
+    margin: 15px;
+    text-align: center;
+  }
+}
