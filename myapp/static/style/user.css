@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.second-title {
+  display: none;
+}
+
 .title {
   display: flex;
   justify-content: center;
@@ -20,6 +24,11 @@
   border-radius: 10px 100px / 120px;
 }
 
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container {
   display: flex;
@@ -81,4 +90,46 @@ img {
 
 .num a {
   text-decoration: none;
+}
+
+@media (max-width: 750px) {
+  .title {
+    width: 400px;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    width: 396px;
+    height: 410px;
+  }
+
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 435px) {
+  .title {
+    width: 210px;
+    text-align: center;
+  }
+
+  .first-title {
+    display: none;
+  }
+
+  .second-title {
+    display: flex;
+  }
+
+  img {
+    display: block;
+    width: 196px;
+    height: 210px;
+  }
+
+  .container {
+    max-width: 200px;
+  }
 }
