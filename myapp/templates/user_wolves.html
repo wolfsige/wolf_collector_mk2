@@ -9,22 +9,24 @@
         <h1>Here is all of {{user.username}}'s pack mates!</h1>
     </div>
 </div>
-<div class="container">
-     {% for post in wolves.items %}
-     <div class="card">
-        <img class="random-wolf" src="">
-        <h2>
-            <a href="{{url_for('wolves_posts.wolf', wolves_id=post.id)}}">{{post.title}}</a>
-        </h2>
-        Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
+<!-- <div class="center-container"> -->
+    <div class="container">
+        {% for post in wolves.items %}
+        <div class="card">
+            <img class="random-wolf" src="">
+            <h2>
+                <a href="{{url_for('wolves_posts.wolf', wolves_id=post.id)}}">{{post.title}}</a>
+            </h2>
+            Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
 
-        <p>
-            Published On: {{post.date.strftime("%y-%m-%d")}}
-        </p><br>
-        <p class="post-text">{{post.text}}</p><br>
+            <p>
+                Published On: {{post.date.strftime("%y-%m-%d")}}
+            </p><br>
+            <p class="post-text">{{post.text}}</p><br>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+<!-- </div> -->
 
     <nav class="page-nav">
         <ul class="page-nums">

@@ -1,18 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
-  <h1>{{ post.title }}</h1>
-  <h2>Written by: {{post.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
-  <p>{{post.text}}</p>
-   {% if post.author == current_user %}
-     <div>
-       <a class="btn btn-secondary" href="{{ url_for('wolves_posts.update', wolves_id=post.id) }}">Update</a>
-       <br>
-       <form action="{{ url_for('wolves_posts.delete_post', wolves_id=post.id) }}" method="POST">
-        <input class="btn btn-danger" type="submit" value="Delete">
-      </form>
-     </div>
-   {% endif %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename= 'style/wolves.css')}}">
+<script defer src="{{ url_for('static', filename= 'js/rando-pictures.js')}}"></script>
+
+<div class="center-container">
+  <div class="container">
+    <img src="" class="random-wolf">
+    <h1>{{ post.title }}</h1>
+    <h2>Written by: {{post.author.username}}</h2>
+    <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
+    <p class="post-text">{{post.text}}</p>
+    {% if post.author == current_user %}
+  </div>
 </div>
+<div class="center-btns">
+    <div class="btns">
+      <div class="update-btn">
+        <a href="{{ url_for('wolves_posts.update', wolves_id=post.id) }}">Update</a>
+      </div>
+      <div>
+        <form action="{{ url_for('wolves_posts.delete_post', wolves_id=post.id) }}" method="POST">
+          <input class="del-btn" type="submit" value="Delete">
+        </form>
+      </div>
+    </div>
+  </div>
+    {% endif %}
 {% endblock content %}
