@@ -84,3 +84,11 @@ input#submit {
 label {
   padding: 10px;
 }
+
+@media (max-width: 500px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
