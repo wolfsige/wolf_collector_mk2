@@ -71,9 +71,16 @@
   text-decoration: none;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 420px) {
   .title-body {
     width: 200px;
     text-align: center;
   }
+
+  img {
+    display: block;
+    width: 196px;
+    height: 210px;
+  }
+
 }
