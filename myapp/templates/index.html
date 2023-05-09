@@ -21,7 +21,7 @@
                     <p class="content">
                         <a href="{{url_for('users.user_posts', username=post.author.username)}}">Owner: {{post.author.username}}</a>
                     </p>
-                    <p class="content">Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
+                    <p class="date">Published: {{post.date.strftime('%Y - %m - %d')}}</p>
                     <a class="content" href="{{url_for('wolves_posts.wolf', wolves_id=post.id)}}">Read About This Wolf</a>
                 </div>
             </div>
