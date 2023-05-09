@@ -85,8 +85,9 @@
     height: 210px;
   }
 
-  p.content {
-    text-align: left;
+  div.container {
+    text-align: center;
+    flex-wrap: wrap;
   }
 
 }
