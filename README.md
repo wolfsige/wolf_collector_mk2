@@ -4,9 +4,9 @@
 ## 🚀 Info:
 Wolf Collector is here to track all of your pack members. never lose track of another wolf again!
 
-![alt text](https://imgur.com/a/6FN4ulZ.jpg)
-![](https://imgur.com/a/KdpvaKQ.jpg)
-![](https://imgur.com/a/2cTM1xf.jpg)
+![](https://imgur.com/gzGRp9Y)
+![](https://imgur.com/sbeLU6m)
+![](https://imgur.com/IcpaoE2)
 
 
 ## 💾 Technologies used:
